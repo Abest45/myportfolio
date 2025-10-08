@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFRS Tax Compliance Guide</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --text: #333;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin: 1.5rem 0 1rem;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .intro {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+        
+        .download-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .btn-download {
+            background-color: var(--accent);
+        }
+        
+        .btn-download:hover {
+            background-color: #c0392b;
+        }
+        
+        .preview-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+        
+        .preview-content {
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 1rem;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+        
+        .preview-content h3 {
+            color: var(--primary);
+            margin: 1.5rem 0 0.5rem;
+        }
+        
+        .preview-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .preview-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2ecc71;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
+            box-shadow: var(--shadow);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                width: 95%;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>IFRS Tax Compliance Guide</h1>
+            <p class="subtitle">Your comprehensive resource for International Financial Reporting Standards tax compliance</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="intro">
+            <h2>About This Guide</h2>
+            <p>This comprehensive guide provides detailed information on tax compliance according to International Financial Reporting Standards (IFRS). It covers the essential principles, reporting requirements, and practical implementation guidance for businesses operating under IFRS.</p>
+            <p>Whether you're a financial professional, accountant, or business owner, this guide will help you navigate the complexities of IFRS tax compliance with confidence.</p>
+        </section>
+        
+        <section class="download-section">
+            <h2>Download the Complete Guide</h2>
+            <p>Get the full PDF version of our IFRS Tax Compliance Guide for offline reading and reference.</p>
+            <button id="downloadBtn" class="btn btn-download">Download PDF Guide</button>
+            <p class="file-info">File: IFRS-Tax-Compliance-Guide.pdf (1.2 MB)</p>
+        </section>
+        
+        <section class="preview-section">
+            <h2>Guide Preview</h2>
+            <p>Browse through selected sections from the guide before downloading.</p>
+            
+            <div class="preview-content">
+                <h3>1. Introduction to IFRS Tax Compliance</h3>
+                <p>International Financial Reporting Standards (IFRS) are designed to bring transparency, accountability, and efficiency to financial markets around the world. Tax compliance under IFRS requires understanding the specific standards that govern how taxes are reported in financial statements.</p>
+                
+                <h3>2. Key IFRS Standards for Tax</h3>
+                <p>The primary standard governing tax under IFRS is IAS 12 - Income Taxes. This standard establishes how companies should account for current and future tax consequences of transactions.</p>
+                
+                <h3>3. Current Tax vs Deferred Tax</h3>
+                <p>Under IAS 12, entities must distinguish between:</p>
+                <ul>
+                    <li><strong>Current tax:</strong> The amount of income taxes payable (recoverable) in respect of the taxable profit (tax loss) for a period</li>
+                    <li><strong>Deferred tax:</strong> The estimated future tax consequences of transactions and events recognized in the financial statements of the current and previous periods</li>
+                </ul>
+                
+                <h3>4. Recognition of Deferred Tax Assets</h3>
+                <p>A deferred tax asset should be recognized for deductible temporary differences to the extent that it is probable that taxable profit will be available against which the deductible temporary difference can be utilized.</p>
+                
+                <h3>5. Disclosure Requirements</h3>
+                <p>IFRS requires comprehensive disclosures about tax, including:</p>
+                <ul>
+                    <li>Major components of tax expense</li>
+                    <li>Explanation of the relationship between tax expense and accounting profit</li>
+                    <li>Details of deferred tax assets and liabilities</li>
+                    <li>Tax uncertainties and provisions</li>
+                </ul>
+                
+                <h3>6. Recent Updates and Changes</h3>
+                <p>The IFRS tax landscape continues to evolve with new interpretations and amendments. Recent changes include updated guidance on uncertain tax treatments and the implementation of the OECD's BEPS (Base Erosion and Profit Shifting) initiatives.</p>
+                
+                <p><em>This is just a preview. Download the complete guide for detailed explanations, examples, and implementation guidance.</em></p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Financial Standards Institute. All rights reserved.</p>
+            <p>This guide is for informational purposes only and does not constitute professional tax advice.</p>
+        </div>
+    </footer>
+    
+    <div id="notification" class="notification">
+        Your download has started. Check your downloads folder.
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadBtn = document.getElementById('downloadBtn');
+            const notification = document.getElementById('notification');
+            
+            // Create a mock PDF file for download
+            function createPDF() {
+                // In a real implementation, this would be an actual PDF file
+                // For demonstration, we'll create a simple text file that simulates a PDF
+                const content = `
+                IFRS TAX COMPLIANCE GUIDE
+                
+                TABLE OF CONTENTS
+                
+                1. Introduction to IFRS Tax Compliance
+                2. Key IFRS Standards for Tax
+                3. Current Tax vs Deferred Tax
+                4. Recognition of Deferred Tax Assets
+                5. Disclosure Requirements
+                6. Recent Updates and Changes
+                7. Implementation Examples
+                8. Case Studies
+                9. Frequently Asked Questions
+                10. Glossary of Terms
+                
+                This is a simulated PDF file. In a real implementation, 
+                this would be an actual PDF document with proper formatting.
+                `;
+                
+                return new Blob([content], { type: 'application/pdf' });
+            }
+            
+            downloadBtn.addEventListener('click', function() {
+                // Create and download the PDF
+                const pdfBlob = createPDF();
+                const url = URL.createObjectURL(pdfBlob);
+                
+                // Create a temporary link for download
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'IFRS-Tax-Compliance-Guide.pdf';
+                document.body.appendChild(a);
+                a.click();
+                
+                // Clean up
+                setTimeout(function() {
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                }, 100);
+                
+                // Show download notification
+                notification.classList.add('show');
+                
+                // Hide notification after 3 seconds
+                setTimeout(function() {
+                    notification.classList.remove('show');
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>
